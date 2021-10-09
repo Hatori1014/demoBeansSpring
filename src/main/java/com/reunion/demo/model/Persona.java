@@ -1,18 +1,16 @@
 package com.reunion.demo.model;
 
-import java.util.Arrays;
-
 public class Persona {
 	private String nombre;
 	private String apellido;
-	private String[] direcciones;
+	private Direccion direccion;
 	
 	public Persona() {};
 	
-	public Persona(String nombre, String apellido, String[] direcciones) {
+	public Persona(String nombre, String apellido, Direccion direccion) {
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.direcciones = direcciones;
+		this.direccion = direccion;
 	}
 	
 	public String getNombre() {
@@ -30,18 +28,23 @@ public class Persona {
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-	
-	public String[] getDirecciones() {
-		return direcciones;
+
+	public Direccion getDireccion() {
+		return direccion;
 	}
-	
-	public void setDirecciones(String[] direcciones) {
-		this.direcciones = direcciones;
+
+	public void setDireccion(Direccion direccion) {
+		this.direccion = direccion;
 	}
 
 	@Override
 	public String toString() {
-		return "Persona [nombre=" + nombre + ", apellido=" + apellido + ", direcciones=" + Arrays.toString(direcciones)
-				+ "]";
-	}	
+		return "Persona [nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + "]";
+	}
+	
+	
+	
+	
+
+
 }

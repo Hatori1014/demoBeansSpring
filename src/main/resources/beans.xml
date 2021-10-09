@@ -7,7 +7,15 @@
 	<bean id="informacion" class="com.reunion.demo.model.Persona">
 		<property name="nombre" value="Carlos"/>
 		<property name="apellido" value="Oviedo"/>
-		<property name="direcciones" value="Av.123, AV. 345"/>
+		<property name="direccion" ref="direccionCarlos"/>
 	</bean>
+	
+	<bean id="direccionCarlos" class="com.reunion.demo.model.Direccion">
+		<constructor-arg name="nomenclatura" value="Av siempre viva 123"/>
+		<constructor-arg name="barrio" value="Suba"/>
+		<constructor-arg name="codigoPostal" value="111111"/>
+	</bean>
+	
+	
 
 </beans>
